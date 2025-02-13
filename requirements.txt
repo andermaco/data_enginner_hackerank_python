@@ -1,0 +1,10 @@
+attrs==23.1.0
+iniconfig==2.0.0
+Markdown==3.4.3
+packaging==23.1
+pluggy==1.0.0
+py==1.11.0
+py4j==0.10.9.7
+pyparsing==3.0.9
+pytest==7.3.1
+toml==0.10.2

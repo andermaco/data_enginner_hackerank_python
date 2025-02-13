@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {"name":"Python Debugger: Current File","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal"},
+        {
+            "name": "Prima Debug",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "house",
+                    "{\"age\": 16, \"flood_risk\": \"HIGH\", \"n_parrots\": 6, \"windows\": {\"intact\": 5, \"broken\": 0}, \"outcome\": \"KO\"}"
+                    // "vehicle",
+                    // "{\"age\": 15, \"accident_history\":[2014,2020], \"outcome\": \"KO\"}"
+
+
+                  ]
+        }
+    ]
+}
