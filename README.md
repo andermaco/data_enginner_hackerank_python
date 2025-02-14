@@ -42,7 +42,7 @@ Considering that vehicles and houses have different base premiums (500$ and 300$
 |:-------------|------------------|--------|
 | 16 years     | [{date: 2023-04-23, at_fault: false}] | Blocked by UW Rules |
 | 6 years     | [{date: 2022-07-20, at_fault: true},{date: 2023-04-23, at_fault: true},{date: 2024-02-23, at_fault: true}] | Blocked by UW Rules |
-| 6 years     | [{date: 2022-07-20, at_fault: false},{date: 2023-04-23, at_fault: true},{date: 2024-01-12, at_fault: false}] | 630.0$ |
+| 6 years     | [{date: 2022-07-20, at_fault: false},{date: 2023-04-23, at_fault: true},{date: 2024-01-12, at_fault: false}] | 630.0$ ** Check whether is a wrong test outcome, should not be an outcome of 825.0$?**|
 | 3 years     | [] | 500$ |
 
 ### House:
