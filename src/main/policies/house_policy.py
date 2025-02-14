@@ -1,16 +1,16 @@
 
-from dataclasses import dataclass
-from typing import Literal
+from dataclasses import dataclass, field
+from typing import ClassVar, Literal
 from .base_policy import Policy
 
 
 @dataclass
-class HomePolicy(Policy):
-    flood_risk: Literal["HIGH", "MEDIUM", "LOW"]
-    n_parrots: int
-    windows: dict
-    outcome: Literal["OK", "KO"]
-    policy_type: str = "home"
+class HousePolicy(Policy):
+    DEFAULT_FLOOD_RISK: ClassVar[Literal["HIGH", "MEDIUM", "LOW"]] = "LOW"    
+    
+    flood_risk: Literal["HIGH", "MEDIUM", "LOW"] = DEFAULT_FLOOD_RISK
+    n_parrots: int = 0
+    windows: dict = field(default_factory=dict)  # Use default_factory to create an empty dict as default value
 
     def __post_init__(self):
         self.validate()
@@ -29,5 +29,3 @@ class HomePolicy(Policy):
             raise ValueError("Windows must be a dictionary")
         if not all(isinstance(val, int) and val >= 0 for val in self.windows.values()):
             raise ValueError("Windows dictionary values must be non-negative integers")
-        if not isinstance(self.outcome, str) or self.outcome not in ("OK", "KO"):
-             raise ValueError("Outcome value must be 'OK' or 'KO'")

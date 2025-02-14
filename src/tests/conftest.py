@@ -1,5 +1,5 @@
 import pytest
-from src.main.policies.home_policy import HomePolicy
+from main.policies.house_policy import HousePolicy
 from src.main.policies.vehicle_policy import VehiclePolicy
 
 @pytest.fixture
