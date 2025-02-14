@@ -51,7 +51,7 @@ Considering that vehicles and houses have different base premiums (500$ and 300$
 |:---|---|---|---|---|
 | 16 years     | HIGH               | 6 | intact_windows: 5, broken_windows: 0 | Blocked by UW Rules |
 | 52 years     | LOW                | 0 | intact_windows: 2, broken_windows: 3 | Blocked by UW Rules |
-| 25 years     | MEDIUM | 1 | intact_windows: 4, broken_windows: 1 | 379.5$ |
+| 25 years     | MEDIUM | 1 | intact_windows: 4, broken_windows: 1 | 379.5$ ** Check whether is a wrong test outcome, should not be an outcome of 370.0$?** |
 | 3 years     | LOW | 0 | intact_windows: 6, broken_windows: 0 | 300$ |
 
 ## Hints
