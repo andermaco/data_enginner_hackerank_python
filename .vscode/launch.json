@@ -89,6 +89,6 @@
             "args": [
                     "house", "{\"age\": \"3 years\", \"flood_risk\": \"LOW\", \"n_parrots\": 0, \"windows\": {\"intact\": 6, \"broken\": 0}}"
                   ]
-        }
+      }
     ]
 }

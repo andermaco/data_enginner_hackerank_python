@@ -29,7 +29,7 @@ Here is a starting set of rules to apply:
 Considering that vehicles and houses have different base premiums (500$ and 300$ respectively) here is a starting set of malus to apply:
 * Add a 5% vintage tax for each year older than 5 years (because classic cars come with a price tag).
 * Apply a 20% crash course fee for each accident in the last 3 years (because we believe in paying for our mistakes).
-* Boost the premium by 15% for houses in medium-risk flood zones (because we like to keep our heads above water).
+* Boost the premium by 15% for houses in medium-risk (and high-risk also included) flood zones (because we like to keep our heads above water). 
 * Implement a 10% retro surcharge if the house is older than 20 years (because old homes come with character and a cost).
 
 
