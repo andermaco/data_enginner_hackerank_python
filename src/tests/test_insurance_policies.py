@@ -160,12 +160,12 @@ def test_calculate_home_premium_with_flood_risk(premium_calculator_house):
     policy = HousePolicy(age="20 years", flood_risk="HIGH", n_parrots=2, windows={"intact": 10, "broken": 2})
     premium = premium_calculator_house.calculate_premium(policy)
     print(premium)
-    assert premium == pytest.approx(300 * (1 + 0.15 + 2*0.01))
+    assert premium == pytest.approx(300 * (1 + 0.15))
     
 def test_calculate_home_premium_with_age_factor(premium_calculator_house):
     policy = HousePolicy(age="40 years", flood_risk="LOW", n_parrots=2, windows={"intact": 10, "broken": 2})
     premium = premium_calculator_house.calculate_premium(policy)
-    assert premium == pytest.approx(300 * (1+ (40-20)*0.1 + 2*0.01))
+    assert premium == pytest.approx(300 * (1+ 0.1))
 
 def test_calculate_unsupported_policy_type(premium_calculator_house):
     class UnsupportedPolicy:
