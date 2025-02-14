@@ -71,10 +71,12 @@ class PremiumCalculator:
         # Bonus-Malus
         
         ## Boost 15% for houses in medium-risk
+        flood_factor = 0
         if policy.flood_risk in ("HIGH","MEDIUM"): 
             flood_factor = 0.15     
         
         ## 10% surcharge if the house is older than 20 years
+        age_factor = 0
         if self._get_age(policy.age) > 20:
             age_factor = 0.10        
         
