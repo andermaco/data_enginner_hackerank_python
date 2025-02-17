@@ -1,6 +1,6 @@
 # Insurance Policy Management System
 
-This is just a job interview test case done for a company (lets call it XXX).
+This is just a job interview test case for a Data Engineer open position done for a company (lets call it XXX).
 
 ## Requirements:
 ### Background
