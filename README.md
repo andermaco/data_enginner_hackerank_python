@@ -1,9 +1,5 @@
 # Insurance Policy Management System
 
-## Environment:
-- Spark Version: 3.4.0
-- Python Version: 3.11
-
 ## Requirements:
 ### Background
 You are tasked with designing a part of a system for managing insurance policies within an insurance company. The objective is to compute the premium based on the details of a quote request. This system should handle different types of insurance policies such as vehicle insurance and home insurance.
@@ -57,3 +53,167 @@ Considering that vehicles and houses have different base premiums (500$ and 300$
 ## Hints
 - `app.py` is there to show how a client would interact with the framework. That's optional.
 - Use any additional library you think it's useful by using `requirements.txt`
+
+<br/>
+<br/>
+
+# Approaches to solve the study case
+Just for testing porposes has been created two approaches to solve the study case:
+
+- Using Spark (PySpark)
+- Using just Python
+
+
+## 1. Using Spark (PySpark)
+Steps to prepare env for running "insurance_policy_management_system.ipynb"jupyter notebook
+### Requirements file
+
+requirements_approach_1.txt
+```python
+jupyterlab==4.3.4
+pyspark==3.5.4  
+pandas==2.2.3  
+```  
+
+### Fist cd <your_project_dir>
+```bash
+cd <your_project_dir>
+```  
+
+### If needed, remove any other previous conda env
+```bash
+conda remove -n <your_conda_env> --all
+```  
+
+### Create conda env
+```bash
+conda create -n data_enginner_hackerank_pyspark python=3.11
+conda activate data_enginner_hackerank_pyspark
+```  
+
+### Install dependencies
+```bash
+pip install requirements.txt
+```  
+
+### Launch jupyter lab framework
+```bash
+jupyter-lab
+```  
+
+### Open jupyter notebook
+Open "jupyter_notebooks/insurance_policy_management_system.ipynb" and lets fun...
+
+<br/>  
+
+## 2. Python code (no spark)  
+### Environment:
+Tested using python 3.13.2
+
+### 
+A .vscode/launch.json file has been created for debugging applications. It defines how VS Code should launch or attach a debugger to the code. It contains the differente study cases to be tested:
+<div style="max-height: 250px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+
+```plaintext
+{
+    "configurations": [
+        {"name":"Python Debugger: Current File","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal"},
+        {
+            "name": "Prima - Vehicle - 1",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    // "house", "{\"age\": \"25 years\", \"flood_risk\": \"HIGH\", \"n_parrots\": 6, \"windows\": {\"intact\": 5, \"broken\": 0}}"                    
+                    "vehicle", "{\"age\": \"16 years\", \"accident_history\": [{\"date\": \"2023-04-23\", \"at_fault\": false}]}"                    
+                  ]
+        },
+        {
+            "name": "Prima - Vehicle - 2",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "vehicle","{\"age\": \"6 years\", \"accident_history\":[{\"date\": \"2022-07-20\", \"at_fault\": true},{\"date\": \"2023-04-23\", \"at_fault\": true},{\"date\": \"2024-01-12\", \"at_fault\": true}]}"
+                  ]
+        },
+        {
+            "name": "Prima - Vehicle - 3",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "vehicle","{\"age\": \"6 years\", \"accident_history\":[{\"date\": \"2022-07-20\", \"at_fault\": false},{\"date\": \"2023-04-23\", \"at_fault\": true},{\"date\": \"2024-01-12\", \"at_fault\": false}]}"
+                  ]
+        },
+        {
+            "name": "Prima - Vehicle - 4",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "vehicle", "{\"age\": \"3 years\", \"accident_history\":[]}"
+                  ]
+        },
+        {
+            "name": "Prima - House - 1",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "house", "{\"age\": \"16 years\", \"flood_risk\": \"HIGH\", \"n_parrots\": 6, \"windows\": {\"intact\": 5, \"broken\": 0}}"
+                  ]
+        },
+        {
+            "name": "Prima - House - 2",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "house", "{\"age\": \"52 years\", \"flood_risk\": \"LOW\", \"n_parrots\": 0, \"windows\": {\"intact\": 2, \"broken\": 3}}"
+                  ]
+        },
+        {
+            "name": "Prima - House - 3",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "house", "{\"age\": \"25 years\", \"flood_risk\": \"MEDIUM\", \"n_parrots\": 1, \"windows\": {\"intact\": 4, \"broken\": 1}}"
+                  ]
+        },
+        {
+            "name": "Prima - House - 4",
+            "type": "python",
+            "request": "launch",            
+            "program": "${workspaceFolder}/src/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "house", "{\"age\": \"3 years\", \"flood_risk\": \"LOW\", \"n_parrots\": 0, \"windows\": {\"intact\": 6, \"broken\": 0}}"
+                  ]
+      }
+    ]
+}
+```
+</div>
+
+<br/>
+Then you should be able to "Run and debug (Ctrl + Shift + D)" the different cases as you can see next:  
+  
+![alt text](image.png)
+
