@@ -66,8 +66,15 @@ Just for testing porposes has been created two approaches to solve the study cas
 - Using just Python
 
 
-## 1. Using Spark (PySpark)
+## 1. Using Spark (PySpark), e.g.: via Jupyter Notebook
 Steps to prepare env for running "insurance_policy_management_system.ipynb"jupyter notebook
+
+<div style="max-height: 250px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">  
+
+![alt text](image-1.png)
+
+</div>
+
 ### Requirements file
 
 requirements_approach_1.txt
