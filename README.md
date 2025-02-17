@@ -71,7 +71,7 @@ Steps to prepare env for running "insurance_policy_management_system.ipynb"jupyt
 
 <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">  
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 </div>
 
@@ -224,5 +224,5 @@ A .vscode/launch.json file has been created for debugging applications. It defin
 <br/>
 Then you should be able to "Run and debug (Ctrl + Shift + D)" the different cases as you can see next:  
   
-![alt text](image.png)
+![alt text](images/image.png)
 
