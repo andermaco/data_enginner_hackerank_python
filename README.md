@@ -1,5 +1,7 @@
 # Insurance Policy Management System
 
+This is just a job interview test case done for a company (lets call it XXX).
+
 ## Requirements:
 ### Background
 You are tasked with designing a part of a system for managing insurance policies within an insurance company. The objective is to compute the premium based on the details of a quote request. This system should handle different types of insurance policies such as vehicle insurance and home insurance.
